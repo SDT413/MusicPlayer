@@ -67,6 +67,7 @@ public class MusicController implements Initializable {
         volume.setOnMouseDragged(event -> {
             mediaPlayer.setVolume(volume.getValue() / 100.0);
         });
+        songBar.setStyle("-fx-accent: #00ff00;");
 
     }
 
@@ -134,7 +135,7 @@ public class MusicController implements Initializable {
                 }
             }
         };
-        timer.scheduleAtFixedRate(timerTask, 1000, 1000);
+        timer.scheduleAtFixedRate(timerTask, 0, 1000);
 
     }
     public void endTimer() {
